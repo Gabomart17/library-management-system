@@ -1,50 +1,69 @@
 <?php
 
-class Libro {
+class Libro
+{
     private $id;
     private $titulo;
     private $autor;
     private $isbn;
     private $cantidad;
 
-    public function __construct($titulo = null, $autor = null, $isbn = null, $cantidad = 1) {
-        // TODO: Inicializar atributos
+    public function __construct($titulo = null, $autor = null, $isbn = null, $cantidad = 1)
+    {
+        $this->setTitulo($titulo);
+        $this->setAutor($autor);
+        $this->setIsbn($isbn);
+        $this->setCantidad($cantidad);
     }
 
     // Getters y Setters
-    public function getId() {
-        // TODO
+    public function getId()
+    {
+        return $this->id;
     }
 
-    public function getTitulo() {
-        // TODO
+    public function setId($id)
+    {
+        $this->id = $id;
     }
 
-    public function setTitulo($titulo) {
-        // TODO
+    public function getTitulo()
+    {
+        return $this->titulo;
     }
 
-    public function getAutor() {
-        // TODO
+    public function setTitulo($titulo)
+    {
+        $this->titulo = $titulo;
     }
 
-    public function setAutor($autor) {
-        // TODO
+    public function getAutor()
+    {
+        return $this->autor;
     }
 
-    public function getIsbn() {
-        // TODO
+    public function setAutor($autor)
+    {
+        $this->autor = $autor;
     }
 
-    public function setIsbn($isbn) {
-        // TODO
+    public function getIsbn()
+    {
+        return $this->isbn;
     }
 
-    public function getCantidad() {
-        // TODO
+    public function setIsbn($isbn)
+    {
+        $this->isbn = $isbn;
     }
 
-    public function setCantidad($cantidad) {
-        // TODO
+    public function getCantidad()
+    {
+        return $this->cantidad;
+    }
+
+    public function setCantidad($cantidad)
+    {
+        $this->cantidad = (int) $cantidad;
     }
 }
